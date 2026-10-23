@@ -1,0 +1,55 @@
+name: Talk proposal
+description: Want to speak at AI Agents Ottawa? Tell us what you'd show.
+title: "Talk: <your title>"
+labels: ["talk-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every night has one Life talk (AI in everyday life) and one Dev talk (what you built, what broke, what you learned). About 20 to 30 minutes, demos beat slides. Fred or Matt will reach out personally.
+
+        **Heads up: this repo is public, so anything you write here (including your contact) is visible to everyone.**
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Best way to reach you (Discord, email or LinkedIn)
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Talk title
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Which track fits?
+      options: [Life, Dev, Not sure]
+    validations:
+      required: true
+  - type: textarea
+    id: pitch
+    attributes:
+      label: What will you show? A few lines is plenty.
+    validations:
+      required: true
+  - type: checkboxes
+    id: nights
+    attributes:
+      label: Nights that work
+      options:
+        - label: Wed Dec 9 2026
+        - label: Wed Jan 20 2027
+        - label: Later in 2027
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options: [Full talk (20 to 30 min), Lightning demo (5 min)]
